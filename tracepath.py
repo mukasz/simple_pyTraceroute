@@ -40,10 +40,10 @@ def tracepath( dest, maxHop=35, timeout=3 ):
 			break
 		sock_sender.close()
 		sock_icmp.close()
-		ttl += 1
 		if ttl > maxHop or str( ip ) == str( ip_current ):
 			print("Trace Complete")
 			break
+		ttl += 1
 
 def main(args):
 	try:
